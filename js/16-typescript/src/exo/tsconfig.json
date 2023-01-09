@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "target": "ES2022",
+        "noEmitOnError": true,
+        "strict": true,
+        "declaration": true,
+        "declarationDir": "types"
+    },
+    "files": [
+        "src/EasyDom.ts"
+    ]
+}
