@@ -11,6 +11,7 @@
 let h = -1,
 	m = -1,
 	s = -1;
+    
 while (h < 0 || h > 24) {
 	h = parseInt(prompt("Quelle heure est il (dois être compris entre 0 et 24) ?"));
 }
