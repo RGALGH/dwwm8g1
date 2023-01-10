@@ -5,12 +5,23 @@
  */
 
 // on recupere l'heure courante
-let h = parseInt(prompt("Quelle heure est il?")),
-	m = parseInt(prompt("Quelle minutes est il?")),
-	s = parseInt(prompt("Quelle seconde est il?"));
+// let h = parseInt(prompt("Quelle heure est il?")),
+// 	m = parseInt(prompt("Quelle minutes est il?")),
+// 	s = parseInt(prompt("Quelle seconde est il?"));
+let h = -1,
+	m = -1,
+	s = -1;
+while (h < 0 || h > 24) {
+	h = parseInt(prompt("Quelle heure est il (dois être compris entre 0 et 24) ?"));
+}
+while (m < 0 || m > 60) {
+	m = parseInt(prompt("Quelle minute est il (dois être compris entre 0 et 24)?"));
+}
+while (s < 0 || s > 60) {
+	s = parseInt(prompt("Quelle seconde est il (dois être compris entre 0 et 24)?"));
+}
 
 // je fais le calcul de l'heure dans 1 seconde
-
 s++; // j'ajoute une seconde
 
 //je test l'impact de cet ajout
