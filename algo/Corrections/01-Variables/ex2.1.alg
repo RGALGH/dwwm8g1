@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description courant="AFFICHER double" texte=""/>
+    <description texte="" courant="AFFICHER double"/>
     <extension extnom="inactif"/>
-    <fonction fctetat="inactif" fctcode=""/>
-    <F2 F2lignes="" F2para="" F2defaut="" F2etat="inactif"/>
+    <fonction fctcode="" fctetat="inactif"/>
+    <F2 F2para="" F2etat="inactif" F2lignes="" F2defaut=""/>
     <repere repetat="inactif" repcode="-10#10#-10#10#2#2"/>
-    <param totalBoucles="5000000" nbDecimales="8" totalAffichages="1000" epaisseurLigne="2" epaisseurPoint="2" arrondiAuto="vrai" maxBoucle="500000"/>
-    <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
-    <item code="100#declarationsvariables" algoitem="VARIABLES">
-        <item code="1#NOMBRE#val" algoitem="val EST_DU_TYPE NOMBRE"/>
-        <item code="1#NOMBRE#double" algoitem="double EST_DU_TYPE NOMBRE"/>
+    <param maxBoucle="500000" arrondiAuto="vrai" totalAffichages="1000" totalBoucles="5000000" epaisseurPoint="2" epaisseurLigne="2" nbDecimales="8"/>
+    <item algoitem="FONCTIONS_UTILISEES" code="200#declarationfonctions"/>
+    <item algoitem="VARIABLES" code="100#declarationsvariables">
+        <item algoitem="val EST_DU_TYPE NOMBRE" code="1#NOMBRE#val"/>
+        <item algoitem="double EST_DU_TYPE NOMBRE" code="1#NOMBRE#double"/>
     </item>
-    <item code="101#debutalgo" algoitem="DEBUT_ALGORITHME">
-        <item code="4#Entrer une valeur : #1" algoitem="AFFICHER &quot;Entrer une valeur : &quot;"/>
-        <item code="19#  val PREND_LA_VALEUR  231" algoitem="//  val PREND_LA_VALEUR  231"/>
-        <item code="2#val#pasliste" algoitem="LIRE val"/>
-        <item code="5#double#val * 2#pasliste" algoitem="double PREND_LA_VALEUR val * 2"/>
-        <item code="3#val#1#pasliste" algoitem="AFFICHER val"/>
-        <item code="3#double#0#pasliste" algoitem="AFFICHER double"/>
+    <item algoitem="DEBUT_ALGORITHME" code="101#debutalgo">
+        <item algoitem="AFFICHER &quot;Entrer une valeur : &quot;" code="4#Entrer une valeur : #1"/>
+        <item algoitem="LIRE val" code="2#val#pasliste"/>
+        <item algoitem="// val PREND_LA_VALEUR  231" code="19# val PREND_LA_VALEUR  231"/>
+        <item algoitem="double PREND_LA_VALEUR val * 2" code="5#double#val * 2#pasliste"/>
+        <item algoitem="AFFICHER val" code="3#val#1#pasliste"/>
+        <item algoitem="AFFICHER double" code="3#double#0#pasliste"/>
     </item>
-    <item code="102#finalgo" algoitem="FIN_ALGORITHME"/>
+    <item algoitem="FIN_ALGORITHME" code="102#finalgo"/>
 </Algo>
