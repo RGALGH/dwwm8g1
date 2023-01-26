@@ -1,0 +1,60 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.slider {
+    margin: 2rem auto;
+    background-color: aquamarine;
+    width: 600px;
+    text-align: center;
+    overflow: hidden;
+    padding: 0.5rem 0 ;
+}
+.slider label{
+    background-color: white;
+    display: inline-block;
+    width: 2rem;
+    line-height: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.slider input{
+    display: none;
+}
+.slider .slides{
+    width: 100%; 
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    position: relative;
+}
+.slider .slide{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: -150%;
+    width: 90%; 
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+    background-color: cadetblue;
+    animation: toLeft 0.5s linear 1;
+}
+.slider input:checked + .slide{
+    animation: fromRight 0.5s linear 1 forwards;
+}
+@keyframes fromRight {
+    from{
+        right: -150%;
+    }
+    to{
+        right: -40%;
+    }
+}
+@keyframes toLeft {
+    from{
+        right: -40%;
+    }
+    to{
+        right: 60%;
+    }
+}

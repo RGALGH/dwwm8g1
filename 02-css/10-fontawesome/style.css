@@ -1,0 +1,18 @@
+/* Les logos font-awesome qui sont importé via la balise 
+<i> et les classes correspondante, sont traité comme du texte */
+.logo{
+    color: green;
+    font-size: 3rem;
+}
+/* Lorsque le code svg est directement mit dans la page
+On peut changer sa couleur avec fill. et sa taille comme 
+n'importe quelle balise */
+svg{
+    width: 50px;
+    fill: red;
+}
+/* En tant qu'image on ne peut pas le changer autrement 
+qu'une image classique. */
+img{
+    width: 50px;
+}

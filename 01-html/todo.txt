@@ -1,0 +1,2 @@
+https://developer.mozilla.org/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+diviser un peu plus les cours
