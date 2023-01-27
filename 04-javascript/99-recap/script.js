@@ -106,6 +106,7 @@
 // // para.innerHTML="<ul><li>test</li><li>test2</li></ul>"
 // para.textContent="<ul><li>test</li><li>test2</li></ul>"
 
+
 //recuperation de saisie utilsateur
 const priceInput = document.querySelector("#priceInput"); // input
 priceInput.setAttribute("placeholder", "Donner un prix"); //ajoute un palceholder pour informer l'utlisateur
@@ -120,7 +121,7 @@ document.querySelector("#checkBtn").addEventListener("click", function (e) {
 	//Action qui va être effectuer sur le click
 	e.preventDefault(); //j'empeche le rechargement de page
 	if (parseInt(priceInput.value) < 0 || parseInt(priceInput.value) > 100) {
-		result.textContent = "la valeur doit être comprise enctre 0 et 100";
+		result.textContent = "la valeur doit être comprise entre 0 et 100";
 	} else {
 		result.textContent = priceInput.value; // recopie le contenu de mon input dans ma balise result
 	}
