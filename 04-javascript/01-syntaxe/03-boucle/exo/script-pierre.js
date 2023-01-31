@@ -72,11 +72,81 @@
  * (le 5.5 demande la même chose mais avec des additions plutôt que des multiplications)
  * exemple factorielle de 5 = 5*4*3*2
  */
-const nombre = parseInt(
-	prompt("Donne un chiffre, et je te donnerai sa factorielle de multiplication")
-);
-let factoriel = nombre;
-for (let i = nombre - 1; i >= 2; i--) {
-	factoriel = factoriel * i;
+// const nombre = parseInt(
+// 	prompt("Donne un chiffre, et je te donnerai sa factorielle de multiplication")
+// );
+// let factoriel = nombre;
+// for (let i = nombre - 1; i >= 2; i--) {
+// 	factoriel = factoriel * i;
+// }
+// console.log(`la factorielle de ${nombre} = ${factoriel}`);
+
+//! -------------------- EXO 5.6 ---------------------
+/*
+ * Ecrire un algorithme qui demande successivement 20(5 parceque la flemme) nombres
+ * et qui lui dise ensuite quel était le plus grand parmi ces nombres.
+ * Bonus : Indiquer la position à laquelle a été donné ce nombre
+ */
+
+// let max = 0;
+// let position = 0;
+
+// for (let i = 1; i <= 5; i++) {
+// 	//je demande un chiffre à mon utilisateur
+// 	const nombre = parseInt(prompt("Sasie n °" + i + " ,Donne moi un chiffre"));
+// 	//je compare ce chiffre a ma valeur max de référence
+// 	if (nombre > max) {
+// 		//la valeur max est dépassé, le met à jour
+// 		max = nombre;
+// 		//bonus, j'enregistre le n° de tour actuelle comme position de référence
+// 		position = i;
+// 	}
+// }
+
+// //Affichage du résultat
+// document.querySelector("#result").textContent =
+// 	"la valeur maximale saisie est " + max + ", position : " + position;
+
+//! -------------------- EXO 5.7 ---------------------
+/*
+ * même exercice que précédement mais on arrête de demander des nombres que si l'utilisateur
+ * entre un 0
+ */
+
+let max = 0;
+let position = 0;
+let nombre = -1;
+let i = 1;
+
+while (nombre !== 0) {
+	//je demande un chiffre à mon utilisateur
+	nombre = parseInt(prompt("Sasie n °" + i + " ,Donne moi un chiffre"));
+	//je compare ce chiffre a ma valeur max de référence
+	if (nombre > max) {
+		//la valeur max est dépassé, le met à jour
+		max = nombre;
+		//bonus, j'enregistre le n° de tour actuelle comme position de référence
+		position = i;
+	}
+	i++; // prochaine saisie
 }
-console.log(`la factorielle de ${nombre} = ${factoriel}`);
+
+//Affichage du résultat
+document.querySelector("#result").textContent =
+	"la valeur maximale saisie est " + max + ", position : " + position;
+
+// nombre = -1;
+// for (;;) {
+// 	i++
+// 	nombre = parseInt(prompt("Sasie n °" + i + " ,Donne moi un chiffre"));
+// 	//saisie 0?
+// 	if (nombre === 0) {
+// 		break;
+// 	}
+
+// 	//je compare ce chiffre a ma valeur max de référence
+// 	if (nombre > max) {
+// 		//la valeur max est dépassé, le met à jour
+// 		max = nombre;
+// 	}
+// }
