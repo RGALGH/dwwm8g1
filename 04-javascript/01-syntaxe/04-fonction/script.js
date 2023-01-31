@@ -16,10 +16,10 @@ Les opérations d'une fonction, ne sont effectué qu'une fois appelé, si on ne
 l'appelle pas, alors ce qu'elle contient ne s'effectuera jamais.*/
 salut();
 // Il existe d'autres façons de déclarer une fonction.
-const salut2 = function(){
+let salut2 = function(){
     /* on peut ranger une fonction dans une variable, son nom sera alors celui
     de la variable, on ne met pas de nom après le mot function */
-    console.log("Salut tout le monde !");
+    console.log("Salut tout le monde ! 2");
 }
 salut2();
 // Ici on utilise une fonction fléché.
@@ -35,6 +35,7 @@ s.salut();
 // On peut aussi ranger des fonctions dans un tableau, même si c'est peu utilisé
 let arr = [function(){console.log("test")}]
 arr[0]()
+
 
 function bonsoir(nom1) {
     if(nom1 == undefined){
@@ -83,7 +84,7 @@ function goodMorning(...noms){
     // join fera de même en séparant les valeurs par le string donné en argument
     console.log("Good morning " +noms.join(" et "));
 }
-goodMorning("Antoine", "Jean", "Charle", "Louis");
+let resultat = goodMorning("Antoine", "Jean", "Charle", "Louis");
 
 function goodEvening(nom1, nom2, ...noms){
     console.log("Good Evening " + nom1 + ", " + nom2 + " et " +noms.toString() );
@@ -91,7 +92,6 @@ function goodEvening(nom1, nom2, ...noms){
 goodEvening("Pierre", "Paul", "Jacque", "Karl");
 
 //--------------- Mettre fin à une fonction, renvoyer une information -------------
-
 function insulte(nom){
     if(nom == undefined){
         console.error("Donne moi un nom !");
