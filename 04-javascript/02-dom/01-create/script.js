@@ -5,7 +5,7 @@ const h = document.createElement("header");
 /* je fais appelle à la méthode (fonction) createElement de l'objet document
 Celle ci prendra le nom d'une balise html en argument. */
 console.log(h);
-/* On obtien un objet "balise header" qui contient énormément de propriété et méthode
+/* On obtient un objet "balise header" qui contient énormément de propriété et méthode
 Celles ci sont accessible de la même façon que n'importe quel objet js. */
 const m = document.createElement("main");
 const f = document.createElement("footer");
