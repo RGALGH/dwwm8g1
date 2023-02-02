@@ -34,10 +34,12 @@ const li2 = document.querySelectorAll("footer li");
 // ! Attention certaines fonctions qui pourraient marcher sur NodeList pourrais ne pas fonctionner sur HTMLCollection.
 console.log(li2);
 
-const header = document.querySelector('header');
+li2[1].textContent = "Granit";
+
+const header = document.querySelector("header");
 /* On peut selectionner un élément html à l'interieur d'un autre plutôt que dans 
  tout le document. */
-const h = header.querySelector('h1');
+const h = header.querySelector("h1");
 console.log(h);
 
 // Récupère l'élément frère suivant mon header (ici main)
