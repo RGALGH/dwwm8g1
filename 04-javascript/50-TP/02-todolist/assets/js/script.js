@@ -5,8 +5,11 @@ const todoInput = document.querySelector("#todoInput");
 const btnRaz = document.querySelector("#btnRaz");
 const btnDark = document.querySelector("#btnDark");
 
-//je créer un tableau qui va stocker mes taches
-let todos = ["Tâche exemple"];
+//je créer un tableau qui va stocker mes taches mais aussi dans la mémoire du navigateur
+let todos = localStorage.getItem("todos")
+	//je récupere la chaine des todos enregistrer en méméoire et je la convertit en tableau grace à la methode spli()
+	? localStorage.getItem("todos").split(",")
+	: ["Tâche exemple"];
 
 // une fonction qui va afficher ma todolist
 function displayTodos() {
@@ -44,12 +47,16 @@ const displayUpdate = (index) => {
 const doUpdate = (index) => {
 	//je met la case 'index' a jour
 	todos[index] = document.querySelector("#updateInput" + index).value;
+	//je met à jour le localstorage en lui passant mon tableau de todos trasnformé en texte grace à la methode 'join()'
+	localStorage.setItem('todos', todos.join(','))
 	displayTodos(); // je raffraichi l'affichage des tâches
 };
 
 //fonction de suppression
 function deleteTodo(index) {
 	todos.splice(index, 1); // je supprime la case correspondant à ma tache dans mon tableau
+	//je met à jour le localstorage en lui passant mon tableau de todos trasnformé en texte grace à la methode 'join()'
+	localStorage.setItem('todos', todos.join(','))
 	displayTodos(); // je raffraichi l'affichage des tâches
 }
 
@@ -70,6 +77,8 @@ btnRaz.onclick = () => {
 form.onsubmit = (e) => {
 	e.preventDefault(); // j'empeche le rechargement de page
 	todos.push(todoInput.value); // j'ajoute la nouvelle à mon tableau
+	//je met à jour le localstorage en lui passant mon tableau de todos trasnformé en texte grace à la methode 'join()'
+	localStorage.setItem('todos', todos.join(','))
 	displayTodos(); // je raffraichi l'affichage des tâches
 };
 
