@@ -1,10 +1,12 @@
+
+
 function start() {
     let tH = document.querySelector(".hour");
     let tM = document.querySelector(".minute");
     let tS = document.querySelector(".second");
     let time,h,m,s;
 
-    setInterval(function(){
+    const timer = setInterval(function(){
         time = new Date();
         h = time.getHours()*30-90;
         m = time.getMinutes()*6-90;
@@ -13,5 +15,7 @@ function start() {
         tM.style.transform = "rotate("+m+"deg)";
         tH.style.transform = "rotate("+h+"deg)";
     },1000);
+
+    document.querySelector('#stopBtn').onclick = (e)=> clearInterval(timer)
 }
 start();
