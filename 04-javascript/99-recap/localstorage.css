@@ -1,4 +1,16 @@
-.dark-mode{
+.light{
+    background-color: aliceblue;
+    color: black;
+}
+.dark{
     background-color: black;
     color: aliceblue;
+}
+.blue{
+    background-color: blue;
+    color: orange;
+}
+.red{
+    background-color: red;
+    color: green;
 }
