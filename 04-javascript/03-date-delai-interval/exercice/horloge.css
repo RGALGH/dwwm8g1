@@ -32,7 +32,7 @@
 	height: 4px;
 	width: 50%;
 }
-.hour,.minute,.second{
+.hour,.minute,.second, #heure{
 	background-color: black;
 	position: absolute;
 	left: 50%;

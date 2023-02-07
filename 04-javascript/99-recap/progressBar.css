@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.bar{
+    background-color: black;
+    width: 100vw;
+    height: 5vh;
+}
+
+.progress{
+    background-color: blue;
+    width: 0vw;
+    height: 5vh;
+}
