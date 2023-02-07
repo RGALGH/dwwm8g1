@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media</title>
-    <link rel="stylesheet" href="./media.css">
-    <script src="./media.js" defer></script>
-</head>
-<body>
-    <button id="test">survolez moi</button>
-    <button id="imgBtn">afficher une image</button>
-    <p id="pImg"></p>
-    <button id="playSoundBtn">jouer une musique</button>    
-    <button id="PauseSoundBtn">pause une musique</button>    
-    <button id="StopSoundBtn">stop une musique</button> 
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Media</title>
+		<link rel="stylesheet" href="./media.css" />
+		<script src="./media.js" defer></script>
+	</head>
+	<body>
+		<button id="test">survolez moi</button>
+		<button id="imgBtn">afficher une image</button>
+		<p id="pImg"></p>
+		<button id="playSoundBtn">jouer une musique</button>
+		<button id="PauseSoundBtn">pause une musique</button>
+		<button id="StopSoundBtn">stop une musique</button>
+
+		<video
+			src="./pexels-maksim-goncharenok-5642529.mp4"
+			width="500px"
+			id="demoVideo"
+			controls
+		>
+			<!-- <source src="./pexels-maksim-goncharenok-5642529.webm" type="video/webm">
+                <source src="./pexels-maksim-goncharenok-5642529.mp4" type="video/mp4"> -->
+			<p>
+				<!-- ne s'affiche que si le navigateur ne gere pas HTML5 -->
+				telecharger le fichier video
+				<a href="./pexels-maksim-goncharenok-5642529.mp4">MP4</a>
+			</p>
+		</video>
+        <button id="playVideoBtn">Lire une video</button>
+
+        <p>
+            <!-- exemple d'integration de video youtube -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/asToYAq0F-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </p>
+
+	</body>
 </html>

@@ -36,3 +36,7 @@ document.querySelector("#StopSoundBtn").onclick = () => {
 	//je reviens au debut du son
 	son.currentTime = 0;
 };
+
+document.querySelector("#playVideoBtn").addEventListener("click", () => {
+	document.querySelector('#demoVideo').ful();
+});
