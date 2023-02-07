@@ -21,3 +21,9 @@ btnStart.addEventListener("click", function () {
 		clearInterval(timer); // arret de l'intervall nommé timer
 	});
 });
+
+
+document.querySelector('#heure').addEventListener('click', function(){
+    const date = new Date();
+    document.querySelector('#temps').textContent = date.toLocaleTimeString()
+})
