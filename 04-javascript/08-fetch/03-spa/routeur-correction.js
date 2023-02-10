@@ -6,10 +6,9 @@ setLinks(document)
 // Je fais la liste de mes routes avec en clef la route voulu
 // et en valeur la route réelle.
 const routes = {
-    "/":"pages/home.html",
-    "/index.html": "pages/home.html",
-    "/about": "pages/about.html",
-    "/contact": "pages/contact.html",
+    "/04-javascript/08-fetch/03-spa/":"pages/home.html",
+    "/04-javascript/08-fetch/03-spa/about": "pages/about.html",
+    "/04-javascript/08-fetch/03-spa/contact": "pages/contact.html",
     404: "pages/404.html"
 };
 function setLinks(parent)
@@ -28,6 +27,7 @@ function router(e) {
 function loadPage(){
     // Je récupère le chemin de la page.
     const path = window.location.pathname;
+    console.log(path);
     // Je récupère le chemin qui correspond dans ma liste.
     const route = routes[path] || routes[404];
     // console.log(route);
