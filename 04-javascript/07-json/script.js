@@ -23,7 +23,11 @@ function saveData(e){
     })
     // J'obtien un objet contenant toute les valeurs de mon formulaire.
     showUser(user);
+    console.log(user);
+    
+    //convertir le JSON en string
     const strUser = JSON.stringify(user);
+    console.log(strUser);
     localStorage.setItem("user", strUser);
 }
 
@@ -34,8 +38,18 @@ function showUser(u){
 
 const userString = localStorage.getItem("user");
 if(userString){
+    //on part du string en localstorage
     console.log(userString);
+    //on le transforme en objet avec JSON.parse
     const user = JSON.parse(userString);
+    //on l'affiche
     console.log(user);
+    // pour extraire une propriété de l'objet, on fait objet.propriete
+    console.log(user.age);
+
     showUser(user);
+}
+const object = {
+    prenom: "Jean",
+    age: 30
 }

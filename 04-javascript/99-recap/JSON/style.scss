@@ -1,0 +1,32 @@
+@mixin template {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 1em auto;
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #333;
+	color: aliceblue;
+	border-radius: 0.5em;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	margin: 0 3em;
+	header {
+		@include template;
+		background-color: rgba($color: #1f204b, $alpha: 0.6);
+	}
+	main {
+		@include template;
+		background-color: rgba($color: #1e4114, $alpha: 0.6);
+		p {
+			padding: 0.5em;
+			text-align: center;
+		}
+	}
+}
