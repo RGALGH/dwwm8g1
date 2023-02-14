@@ -97,6 +97,10 @@ function handleFetch(responseText)
 }
 function showResult(data)
 {
-    // console.log(data);
-    document.body.innerHTML += `<h2>${data.homeTown}</h2>`;
+    console.log(data);
+    document.body.innerHTML += `
+    <h2>${data.homeTown}</h2>
+    <p>${data.secretBase}</p>
+    <p>${data.formed}</p>
+    `;
 }

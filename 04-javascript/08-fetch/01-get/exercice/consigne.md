@@ -1,4 +1,4 @@
-# Exercice sur les requêtes HTT #
+# Exercice sur les requêtes HTTP #
 
 ## 1. heros ##
 
