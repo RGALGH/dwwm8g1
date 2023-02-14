@@ -37,6 +37,7 @@ function addHeroes(responseText) {
 		heroesLst.appendChild(opt);
 	}
 }
+
 // fonction appelez sur le click pour afficher les détails du héros
 const displayHeroes = (hero) => {
 	//je recupere mon main et je lui ajoute la fiche du héros
