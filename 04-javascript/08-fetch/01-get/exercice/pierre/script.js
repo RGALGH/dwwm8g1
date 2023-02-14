@@ -27,13 +27,11 @@ function addHeroes(responseText) {
 		//je créer une nouvelle option pour mon select
 		const opt = document.createElement("option");
 		// je lui assigne le nom du héros
-		opt.textContent = member.name;
-		// opt.textContent = hero.name;
+		opt.textContent = hero.name;
 		//je lui associe une action sur le click
 		opt.onclick = () => {
 			//aficher le détail du héros
-			// displayHeroes(hero);
-			displayHeroes(member);
+			displayHeroes(hero);
 		};
 		// j'ajoute la ligne a mon select
 		heroesLst.appendChild(opt);
