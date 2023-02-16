@@ -1,37 +1,42 @@
 export default class Telephone {
 	//je defini les carateristiques de la classe telephone
 	static telType = "smartphone";
-	nom = "";
-	couleur = "";
+	#nom = "";
+	#couleur = "";
 	#poids = 0;
-	marque = "";
-	taille = "";
-	cpu = "";
+	#marque = "";
+	#taille = "";
+	#cpu = "";
 
 	//je créer le contructeur de la classe telephone, qui me permettera d'utiliser le mot clé new
 	constructor(nom, couleur, poids, marque, taille, cpu) {
-		this.nom = nom;
-		this.couleur = couleur;
-		this.poids = poids;
-		this.marque = marque;
-		this.taille = taille;
-		this.cpu = cpu;
+		this.#nom = nom;
+		this.#couleur = couleur;
+		this.#poids = poids;
+		this.#marque = marque;
+		this.#taille = taille;
+		this.#cpu = cpu;
 	}
 
 	//je créer les geter/seter de la classe telephone
-	get couleur() {
-		return this.couleur;
+    get getNom() {
+		return this.#nom.toUpperCase();
 	}
 
-	set couleur(couleur) {
-		this.couleur = couleur;
+	set setNom(nom) {
+		this.#nom = nom;
+	}
+      
+	get getCouleur() {
+		return this.#couleur;
 	}
 
-	get poids() {
-        if(roleUser === "admin") {
+	set setCouleur(couleur) {
+		this.#couleur = couleur;
+	}
 
-		return this.poids;
-        }
+	get getPoids() {
+		return this.#poids;
 	}
 
 	set setPoids(poids) {
@@ -40,55 +45,55 @@ export default class Telephone {
 
             return false;
         }
-		this.poids = poids;
+		this.#poids = poids;
 	}
 
-	get marque() {
-		return this.marque;
+	get getMarque() {
+		return this.#marque;
 	}
 
-	set marque(marque) {
-		this.marque = marque;
+	set setMarque(marque) {
+		this.#marque = marque;
 	}
 
-	get taille() {
-		return this.taille;
+	get getTaille() {
+		return this.#taille;
 	}
 
-	set taille(taille) {
-		this.taille = taille;
+	set setTaille(taille) {
+		this.#taille = taille;
 	}
 
-	get cpu() {
-		return `${this.name} a le cpu ${this.cpu}`;
+	get getCpu() {
+		return `${this.#nom} a le cpu ${this.#cpu}`;
 	}
 
-	set cpu(cpu) {
-		this.cpu = cpu;
+	set setCpu(cpu) {
+		this.#cpu = cpu;
 	}
 
 	//je créer les méthodes de la classe telephone
 	demarer() {
-		console.log(`le ${this.nom} a démarré`);
+		console.log(`le ${this.getNom} a démarré`);
 	}
 
 	sonner() {
-		console.log(`le ${this.nom} sonne`);
+		console.log(`le ${this.getNom} sonne`);
 	}
 
 	pleurer() {
-		console.log(`le ${this.nom} pleure`);
+		console.log(`le ${this.getNom} pleure`);
 	}
 
 	eteindre() {
-		console.log(`le ${this.nom} s'eteint paisiblement`);
+		console.log(`le ${this.getNom} s'eteint paisiblement`);
 	}
 
 	tomber(hauteur) {
-		console.log(`le ${this.nom} tombe de ${hauteur} cm de haut, il s'est cassé`);
+		console.log(`le ${this.getNom} tombe de ${hauteur} cm de haut, il s'est cassé`);
 	}
 
 	envoyerSMS(msg) {
-		console.log(`le ${this.nom} a envoyé le message ${msg}`);
+		console.log(`le ${this.getNom} a envoyé le message ${msg}`);
 	}
 }
