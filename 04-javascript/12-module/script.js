@@ -38,7 +38,6 @@
 import b, {salut, coucou as c} from "./salutation.js";
 
 b();
-console.log('b');
 salut();
 /* 
     Un élément importé peut très bien faire appel à des éléments qui ne sont pas importé. 
