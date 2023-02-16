@@ -1,5 +1,5 @@
-const urlAllCountries = "https://restcountries.com/v3.1/all";
 const urlNameCountrie = "https://restcountries.com/v3.1/name/";
+const urlAllCountries = "https://restcountries.com/v3.1/all";
 
 const frmCountry = document.querySelector("#frmCountry");
 const resCountry = document.querySelector("#resCountry");
@@ -13,8 +13,11 @@ frmCountry.onsubmit = (e) => {
 	const data = new FormData(frmCountry);
 	//recuper le pays seul
 	const countryToSearch = data.get("country");
-	//fetch l'url qui correspond au pays
+	//fetch l'url qui correspond au pays  exemple: https://restcountries.com/v3.1/name/fr
 	fetch(urlNameCountrie + countryToSearch)
+
+	// "https://restcountries.com/v3.1/name/" + "chi"
+	// https://restcountries.com/v3.1/name/chi
 		.then((res) => {
 			// on obient un resultat
 			if (res.ok) {
@@ -23,7 +26,7 @@ frmCountry.onsubmit = (e) => {
 					.json() // on transforme la reponse en json
 					.then((data) => {
 						// que l'on met dans la variable data
-						console.log(data);
+						// console.log(data);
 						//je vide la desitnation pour eviter le cumul des pays avec les recherches precedente
 						resCountry.innerHTML = "";
 						//pour chaque pays de la reponse
@@ -34,7 +37,8 @@ frmCountry.onsubmit = (e) => {
 							// je lui met un contenu
 							article.innerHTML = `
 								<h1>${country.name.common}</h1>    
-								<p>Superficie : ${country.area}</p>
+								<p>Superficie : ${country.area} km²</p>
+								<p>Dtatus : ${country.status}</p>
 								<p>Drapeau : ${country.flag}</p>
 								<p>population : ${country.population}</p>
 							`;

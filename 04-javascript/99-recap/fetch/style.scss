@@ -1,0 +1,16 @@
+body{
+    margin: auto 3vw;
+    section{
+        margin: 2vh auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        article{
+            padding: 1em;
+            border: 1px solid green;
+            width: 25vw;
+        }
+        
+    }
+}
