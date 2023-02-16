@@ -1,24 +1,24 @@
 "use strict";
 //---------------------------- Les classes en POO-------------------------------------
 import H from "./Human.js";
-const humain = new H("maurice", "dupont", "78");
-console.log(humain);
-console.log(humain instanceof H);
+const maurice = new H("maurice", "dupont", "78");
+console.log(maurice);
+console.log(maurice instanceof H);
 // -------------- Static -------------------
 // fonctionne
 H.description();
 console.log(H.categorie);
 // ne fonctionne pas
-// console.log(humain.categorie);
-// humain.description();
+// console.log(maurice.categorie);
+// maurice.description();
 // --------------- Private -----------------
-// console.log(humain.#name);
+// console.log(maurice.#name);
 // Je peux accèder à fullname mais pas à #name
-console.log(humain.fullname);
+console.log(maurice.fullname);
 // Si on ne met pas une méthode ou une propriété en privée, elle est public et accessible partout.
-console.log(humain.createdAt);
-humain.salutation();
-humain.anniversaire();
+console.log(maurice.createdAt);
+maurice.salutation();
+maurice.anniversaire();
 // ------------------------------- L'héritage ---------------------------------------
 import D from "./Dev.js";
 let dev = new D("bruno", "dubois", 19, "Javascript");
