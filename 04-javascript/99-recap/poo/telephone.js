@@ -42,7 +42,6 @@ export default class Telephone {
 	set setPoids(poids) {
         //avant de changer le poids, on vérifie que le poids est bien un entier
         if (isNaN(poids)) {
-
             return false;
         }
 		this.#poids = poids;
